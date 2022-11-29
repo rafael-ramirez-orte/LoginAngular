@@ -8,6 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+irLista() {
+throw new Error('Method not implemented.');
+}
   dataUser: any;
 
   constructor(private afAuth: AngularFireAuth,
@@ -26,6 +29,9 @@ export class DashboardComponent implements OnInit {
 
   logOut() {
     this.afAuth.signOut().then(() => this.router.navigate(['/login']));
+  }
+  List (){
+    this.afAuth.signOut().then(() => this.router.navigate(['../pokemon-list/pokemon-list.component.html']));
   }
 
 }

@@ -18,6 +18,13 @@ import { RecuperarPasswordComponent } from './components/recuperar-password/recu
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 
 import { environment } from 'src/environments/environment';
+import { HeaderComponent } from './components/header/header.component';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import {HttpClientModule} from '@angular/common/http';
+import {NgxPaginationModule} from 'ngx-pagination';
+
+
+
 
 @NgModule({
   declarations: [
@@ -27,7 +34,9 @@ import { environment } from 'src/environments/environment';
     RegistrarUsuarioComponent,
     VerificarCorreoComponent,
     RecuperarPasswordComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    HeaderComponent,
+    PokemonListComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +44,9 @@ import { environment } from 'src/environments/environment';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(), // ToastrModule added
+    ToastrModule.forRoot(),
+    HttpClientModule,
+    NgxPaginationModule       // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]
